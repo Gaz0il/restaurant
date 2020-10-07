@@ -1,0 +1,40 @@
+
+.box2{
+    background: linear-gradient(0deg, $topgrey 95%, #c4c2c2 100%);
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-weight: 500;
+ 
+    /*prevoir icon dimension*/
+   }
+.box3 {
+    background-color: $greybox;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2em; 
+    &__slogan1{
+        font-weight: 700;
+        font-size: 3rem;
+        margin-top: 1em;
+        margin-bottom:0.3em;
+    }
+    &__slogan2{
+        font-weight: 100;
+        font-size:1.5rem;
+
+        margin-bottom: 1.5em;
+    }
+}
+.top{
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 20%;
+    height: auto;
+}
