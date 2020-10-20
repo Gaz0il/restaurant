@@ -1,85 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a303fbf2e3.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a303fbf2e3.js"
+      crossorigin="anonymous"
+    ></script>
     <title>OhMyFood</title>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header class="top">
-
-        <div class="box1">
-            <h1><a>
-                    <img src="img\ohmyfood.png" alt="logo OhMyFood" class="logo">
-                </a>
-            </h1>
-        </div>
-        <div class="box2"><i class="fas fa-map-marker-alt"></i> Paris, Belleville
-        </div>
-        <div class="box3">
-            <a class="box3__slogan1">Réserver le menu qui vous convient</a>
-            <a class="box3__slogan2">Découvrez des restaurants d'exception, sélectionnés par nos soins.</a>
-            <button class="box3__targetresto box3__targetresto--active" type="button"> Explorer nos restaurants</button>
-
-        </div>
-
-
+      <div class="box1">
+        <h1>
+          <a>
+            <img src="img\ohmyfood.png" alt="logo OhMyFood" class="logo" />
+          </a>
+        </h1>
+      </div>
+      <div class="position">
+        <i class="fas fa-map-marker-alt"></i> Paris, Belleville
+      </div>
+      <div class="explain">
+        <a class="explain__slogan1">Réserver le menu qui vous convient</a>
+        <a class="explain__slogan2"
+          >Découvrez des restaurants d'exception, sélectionnés par nos soins.</a
+        >
+        <button
+          class="box3__targetresto box3__targetresto--active"
+          type="button"
+        >
+          Explorer nos restaurants
+        </button>
+      </div>
     </header>
     <main>
-        <section class="funct">
-            <div class="funct__box"> choisissez un restaurant
-                <div class="funct__box__N">1
-                </div>
-            </div>
-            <div class="funct__box"> Composez votre menu
-                <div class="funct__box__N">2
-                </div>
-            </div>
-            <div class="funct__box"> Dégustez au restaurant
-                <div class="funct__box__N">3
-                </div>
-            </div>
-        </section>
-        <section class="restaurant">
-            <h2>Restaurants</h2>
-            <article class="restaurant__box">
-                <img class="restaurant__box__pict" src="" alt="La palette du goût">
-                <div class="new new--disabled">Nouveau</div>
-            </article>
-            <article class="restaurant__box">
-                <img class="restaurant__box__pict" src="" alt="La note enchantée">
-                <div class="new new--disabled">Nouveau</div>
-            </article>
-            <article class="restaurant__box">
-                <img class="restaurant__box__pict" src="" alt="A la française">
-                <div class="new new--disabled">Nouveau</div>
-            </article>
-            <article class="restaurant__box">
-                <img class="restaurant__box__pict" src="" alt="Le délice des sens">
-                <div class="new new--disabled">Nouveau</div>
-            </article>
-        </section>
+      <section class="funct">
+        <h2>Fonctionnement</h2>
+
+        <div class="funct__box">
+          <div class="funct__box__N"><i class="fa fa-circle fa-lg"></i></div>
+          <div class="funct__box__text">1</div>
+          <i class="fas fa-mobile-alt"></i>Choisissez un restaurant
+        </div>
+        <div class="funct__box">
+          <div class="funct__box__N"><i class="fa fa-circle fa-lg"></i></div>
+          <div class="funct__box__text">2</div>
+          <i class="fas fa-bars"></i>Composez votre menu
+        </div>
+        <div class="funct__box">
+          <div class="funct__box__N"><i class="fa fa-circle fa-lg"></i></div>
+          <div class="funct__box__text">3</div>
+          <i class="fas fa-store"></i>Dégustez au restaurant
+        </div>
+      </section>
+      <section class="restaurant">
+        <h2>Restaurants</h2>
+        <article class="restaurant__box">
+          <img class="restaurant__box__pict" src="" alt="La palette du goût" />
+          <div class="new new--disabled">Nouveau</div>
+        </article>
+        <article class="restaurant__box">
+          <img class="restaurant__box__pict" src="" alt="La note enchantée" />
+          <div class="new new--disabled">Nouveau</div>
+        </article>
+        <article class="restaurant__box">
+          <img class="restaurant__box__pict" src="" alt="A la française" />
+          <div class="new new--disabled">Nouveau</div>
+        </article>
+        <article class="restaurant__box">
+          <img class="restaurant__box__pict" src="" alt="Le délice des sens" />
+          <div class="new new--disabled">Nouveau</div>
+        </article>
+      </section>
     </main>
     <footer>
-        <section class="box">
-            <img src="logo" alt="ohmyfood" class="box__logo">
-            <img src="fork" alt="fork" class="box__smallpic"><a>Proposer un restaurant</a>
-            <img src="cloud" alt="cloud" class="box__pic"><a>Devenir partenaire</a>
-            <a>Mentions légales</a>
-            <a>Contact</a>
-
-        </section>
-
-
+      <section class="box">
+        <img src="logo" alt="ohmyfood" class="box__logo" />
+        <img src="fork" alt="fork" class="box__smallpic" /><a
+          >Proposer un restaurant</a
+        >
+        <img src="cloud" alt="cloud" class="box__pic" /><a
+          >Devenir partenaire</a
+        >
+        <a>Mentions légales</a>
+        <a>Contact</a>
+      </section>
     </footer>
-</body>
-
+  </body>
 </html>
