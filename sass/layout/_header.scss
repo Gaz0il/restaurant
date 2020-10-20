@@ -1,14 +1,14 @@
 
-.box2{
+.position{
     background: linear-gradient(0deg, $topgrey 95%, #c4c2c2 100%);
     text-align: center;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     font-weight: 500;
  
-    /*prevoir icon dimension*/
+    
    }
-.box3 {
+.explain{
     background-color: $greybox;
     text-align: center;
     display: flex;
@@ -16,13 +16,13 @@
     padding-bottom: 2em; 
     &__slogan1{
         font-weight: 700;
-        font-size: 3rem;
+        font-size: 3em;
         margin-top: 1em;
         margin-bottom:0.3em;
     }
     &__slogan2{
         font-weight: 100;
-        font-size:1.5rem;
+        font-size:1.5em;
 
         margin-bottom: 1.5em;
     }

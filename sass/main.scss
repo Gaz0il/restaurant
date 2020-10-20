@@ -1,31 +1,70 @@
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
-@import 'vendors/bootstrap';
+@import "vendors/bootstrap";
 
-@import 'base/reset';
-@import 'base/typography';
+@import "base/reset";
+@import "base/typography";
 
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/forms';
+@import "layout/navigation";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+@import "layout/forms";
 
-@import 'components/buttons';
-@import 'components/carousel';
-@import 'components/cover';
-@import 'components/dropdown';
+@import "components/buttons";
+@import "components/carousel";
+@import "components/cover";
+@import "components/dropdown";
 
-@import 'pages/home';
-@import 'pages/contact';
+@import "pages/home";
+@import "pages/contact";
 
-@import 'themes/theme';
-@import 'themes/admin';
+@import "themes/theme";
+@import "themes/admin";
 
+body {
+  font-family: Roboto;
+  font-size: 1.5rem;
+}
 
-body{
-    font-family:Roboto;
-    font-size: 1.5rem;
+.funct {
+  display: flex;
+  flex-direction: column;
+  &__box {
+    @include roundbox;
+    &__N {
+      position: absolute;
+      margin-left: -26px;
+      color: $purple;
+      font-size: 1rem;
+      font-family: Roboto;
+      border-radius: 30%;
+    }
+    &__text {
+      position: absolute;
+      margin-left: -20px;
+      font-weight: bold;
+      color: white;
+    }
+
+    & .fas {
+      align-items: center;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      color: grey;
+    }
+  }
+}
+.restaurant {
+  background-color: $greybox;
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+  }
 }
