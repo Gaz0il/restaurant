@@ -27,33 +27,47 @@
 body {
   font-family: Roboto;
   font-size: 1.5rem;
+  margin: 0;
+}
+
+.title {
+  @include title;
 }
 
 .funct {
   display: flex;
   flex-direction: column;
+  margin-bottom: 80px;
   &__box {
     @include roundbox;
+    &__message {
+      font-size: 1.5em;
+      margin-top: 1.5%;
+    }
     &__N {
       position: absolute;
-      margin-left: -26px;
+      margin-left: -3%;
+      margin-top: 1%;
       color: $purple;
-      font-size: 1rem;
+
       font-family: Roboto;
-      border-radius: 30%;
     }
     &__text {
       position: absolute;
-      margin-left: -20px;
-      font-weight: bold;
+      margin-left: -1%;
+      margin-top: 2%;
+      font-size: 1.2em;
+      font-weight: 400;
+
       color: white;
     }
 
     & .fas {
       align-items: center;
-      padding-right: 1rem;
-      padding-left: 1rem;
+      padding-right: 30px;
+      padding-left: 10%;
       color: grey;
+      margin-top: 1.5%;
     }
   }
 }
@@ -67,4 +81,60 @@ body {
     display: flex;
     flex-direction: column;
   }
+}
+.restaurant__box {
+  display: flexbox;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  margin-left: 25px;
+  margin-right: 25px;
+
+  &__pict {
+    height: 14rem;
+
+    object-fit: cover;
+    object-position: 0% 90%;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 3px 20px -9px rgba(0, 0, 0, 0.5);
+  }
+  &__new {
+    position: absolute;
+    background-color: #99e2d0;
+    color: #179576;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: 700;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 65%;
+    margin-top: 4%;
+  }
+  &__card {
+    display: flexbox;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 20px -9px rgba(0, 0, 0, 0.5);
+
+    &__name {
+      font-weight: 700;
+      padding-left: 15px;
+      padding-top: 20px;
+    }
+    &__spot {
+      font-weight: 200;
+      padding-left: 15px;
+      padding-bottom: 20px;
+    }
+  }
+}
+.restaurant .title {
+  padding-bottom: 10px;
 }

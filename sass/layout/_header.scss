@@ -1,40 +1,40 @@
-
-.position{
-    background: linear-gradient(0deg, $topgrey 95%, #c4c2c2 100%);
-    text-align: center;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    font-weight: 500;
- 
-    
-   }
-.explain{
-    background-color: $greybox;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 2em; 
-    &__slogan1{
-        font-weight: 700;
-        font-size: 3em;
-        margin-top: 1em;
-        margin-bottom:0.3em;
-    }
-    &__slogan2{
-        font-weight: 100;
-        font-size:1.5em;
-
-        margin-bottom: 1.5em;
-    }
+.position {
+  background: linear-gradient(0deg, $topgrey 95%, #c4c2c2 100%);
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 500;
 }
-.top{
-    display: flex;
-    flex-direction: column;
+.explain {
+  background-color: $greybox;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2em;
+  &__slogan1 {
+    font-weight: 700;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.3em;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  &__slogan2 {
+    font-weight: 200;
+    font-size: 1em;
+
+    margin-bottom: 1.5em;
+  }
 }
-.logo{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 20%;
-    height: auto;
+.top {
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 50%;
+  margin-bottom: -15px;
 }
