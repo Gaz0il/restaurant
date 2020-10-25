@@ -3,18 +3,18 @@
   border-radius: 40px;
 
   background: linear-gradient(-1deg, $purple 0%, $pink 45%);
-
+  margin-top: 10px;
+  margin-bottom: 40px;
   text-align: center;
-  padding: 15px 45px;
-  font-size: 1.5em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 0.9em;
   font-family: Roboto;
   opacity: 1;
+
   border-style: none;
   border-color: transparent;
-
-  outline: none;
   box-shadow: 0px 5px 5px #aaaaaa;
-
   &:active {
     box-shadow: 0 0 0 1pt rgba(0, 0, 0, 0.5);
   }
@@ -23,7 +23,7 @@
 @mixin roundbox() {
   display: flex;
   flex-direction: row;
-  border-radius: 15px;
+  border-radius: 30px;
   background: $greybox;
   font-family: Roboto;
   border-color: $greybox;
@@ -32,12 +32,13 @@
   box-shadow: -4px 5px 5px $greyboxshadow;
   opacity: 0.8;
   border-style: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
-  padding: 1rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 35px;
+  margin-right: 20px;
 
   font-size: 1rem;
   font-weight: 700;
@@ -51,4 +52,10 @@
   }
 }
 @mixin card() {
+}
+@mixin title {
+  padding-top: 40px;
+  padding-left: 25px;
+  font-weight: 300;
+  margin-bottom: -10px;
 }
