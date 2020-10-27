@@ -51,11 +51,30 @@
     }
   }
 }
-@mixin card() {
-}
+
 @mixin title {
   padding-top: 40px;
   padding-left: 25px;
   font-weight: 300;
   margin-bottom: -10px;
+}
+@mixin heart-crop() {
+  cursor: pointer;
+  border-color: none;
+  border: none;
+}
+@mixin heart-full {
+  .fa {
+    visibility: visible;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from($purple),
+      to($pink)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial;
+  }
 }
