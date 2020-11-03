@@ -86,6 +86,7 @@ body {
 .restaurant__box {
   display: flex;
   flex-direction: column;
+
   padding-bottom: 2rem;
   margin-left: 25px;
   margin-right: 25px;
@@ -115,18 +116,47 @@ body {
     box-shadow: 0 3px 20px -9px rgba(0, 0, 0, 0.5);
   }
   &__new {
-    position: absolute;
-    background-color: #99e2d0;
-    color: #179576;
-    border-radius: 3px;
-    font-size: 0.8em;
-    font-weight: 700;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    margin-left: 65%;
-    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    &__pictw {
+      height: 14rem;
+
+      object-fit: cover;
+      object-position: 0% 90%;
+      max-width: 100%;
+      width: 100%;
+      max-height: 100%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 3px 20px -9px rgba(0, 0, 0, 0.5);
+    }
+    &__picth {
+      height: 14rem;
+
+      object-fit: cover;
+      object-position: 0% 60%;
+      max-width: 100%;
+      width: 100%;
+      max-height: 100%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 3px 20px -9px rgba(0, 0, 0, 0.5);
+    }
+    &__text {
+      position: absolute;
+      background-color: #99e2d0;
+      color: #179576;
+      border-radius: 3px;
+      font-size: 0.8em;
+      font-weight: 700;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      margin-top: 15px;
+      margin-right: 15px;
+    }
   }
   &__card {
     display: flex;
@@ -196,4 +226,44 @@ body {
 }
 .restaurant .title {
   padding-bottom: 10px;
+}
+.link:link,
+.link:visited,
+.link:hover,
+.link:active {
+  color: currentColor;
+  text-decoration: none;
+}
+.menu {
+  border-style: none;
+  position: relative;
+  margin-top: -70px;
+  background: $greybox;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding-left: 25px;
+  &__top {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    padding-top: 50px;
+    &__name {
+      font-family: Shrikhand;
+      font-size: 1.6em;
+    }
+  }
+  &__list {
+    &__spec {
+      font-size: 0.9em;
+      padding-top: 35px;
+    }
+    &__hrline {
+      margin-top: 5px;
+      border-top-style: solid;
+      border-color: $green;
+      border-width: 3px;
+      width: 55px;
+    }
+  }
 }
