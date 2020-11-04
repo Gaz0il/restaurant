@@ -242,6 +242,7 @@ body {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   padding-left: 25px;
+  padding-right: 25px;
   &__top {
     display: flex;
     flex-direction: row;
@@ -256,14 +257,107 @@ body {
   &__list {
     &__spec {
       font-size: 0.9em;
-      padding-top: 35px;
+      padding-top: 40px;
     }
     &__hrline {
       margin-top: 5px;
       border-top-style: solid;
       border-color: $green;
-      border-width: 3px;
+      border-width: 4px;
       width: 55px;
+    }
+    &__bubble {
+      margin-top: 18px;
+      margin-bottom: 21px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      border-radius: 20px;
+      background-color: #ffffff;
+      border-style: none;
+      border-color: transparent;
+      box-shadow: 0px 5px 5px #cfcfcf;
+
+      &__dish {
+        background-color: #ffffff;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-radius: 20px;
+        min-width: 92%;
+
+        padding-left: 15px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        padding-right: 15px;
+        display: flex;
+        flex-direction: column;
+        &__title {
+          font-weight: 700;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          margin-bottom: 2px;
+        }
+        &__desc {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          &__text {
+            padding-top: 3px;
+            font-weight: 300;
+            font-size: 0.8em;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          &__price {
+            font-weight: 700;
+            font-size: 0.8em;
+          }
+        }
+      }
+      &__check {
+        visibility: hidden;
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: $green;
+        & .dish-hover {
+          max-width: 78%;
+          min-width: 78%;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+        }
+        & .check-hover {
+          visibility: visible;
+
+          padding-left: 20px;
+          margin-top: 5px;
+
+          & .fas {
+            visibility: visible;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  & .order {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__position {
+      margin-bottom: 55px;
+      margin-top: 40px;
+    }
+    & .box3__targetresto {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 75px;
+      padding-right: 75px;
     }
   }
 }

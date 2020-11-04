@@ -39,15 +39,21 @@
   margin-bottom: -15px;
 }
 .logo__menu {
-  width: 50%;
+  height: 35px;
 }
-
+.header__menu__arrow {
+  position: absolute;
+  left: 20px;
+  top: 35px;
+}
 .header__menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
   margin-bottom: 10px;
+  height: 63px;
 }
 .png {
   &__crop {
