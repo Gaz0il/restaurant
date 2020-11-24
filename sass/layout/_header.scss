@@ -61,3 +61,11 @@
     height: auto;
   }
 }
+.pngh {
+  &__croph {
+    object-fit: cover;
+    object-position: 0 -225px;
+    width: 100%;
+    height: 350px;
+  }
+}

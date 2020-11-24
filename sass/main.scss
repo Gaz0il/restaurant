@@ -35,30 +35,26 @@ body {
 }
 
 .funct {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 80px;
+  &-global {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__box {
     @include roundbox;
     &__message {
       font-size: 1.5em;
-      margin-top: 1.5%;
     }
-    &__N {
-      position: absolute;
-      margin-left: -3%;
-      margin-top: 1%;
-      color: $purple;
 
-      font-family: Roboto;
-    }
     &__text {
       position: absolute;
-      margin-left: -1%;
-      margin-top: 2%;
       font-size: 1.2em;
       font-weight: 400;
-
+      border-radius: 50%;
+      padding-left: 7px;
+      padding-right: 7px;
+      margin-left: -10px;
+      background-color: $purple;
       color: white;
     }
 
@@ -67,7 +63,6 @@ body {
       padding-right: 30px;
       padding-left: 10%;
       color: grey;
-      margin-top: 1.5%;
     }
   }
 }
@@ -186,28 +181,24 @@ body {
         cursor: pointer;
 
         & .far {
+          visibility: visible;
+          opacity: 1;
+
           @include heart-crop;
           color: gray;
         }
         & .fa {
+          position: absolute;
+          visibility: hidden;
+          opacity: 0;
           @include heart-crop;
-          display: none;
         }
 
         &:hover {
           .far {
-            display: none;
-          }
-          @include heart-full;
-        }
-        &:focus {
-          outline: none;
-          border: none;
-          border-style: none;
-          border-color: transparent;
-          background-color: transparent;
-          .far {
-            display: none;
+            visibility: hidden;
+            opacity: 1;
+            transition: visibility 0.3s ease-out, opacity 0.3s ease-out;
           }
           @include heart-full;
         }
@@ -234,6 +225,7 @@ body {
   color: currentColor;
   text-decoration: none;
 }
+
 .menu {
   border-style: none;
   position: relative;
@@ -243,12 +235,14 @@ body {
   border-top-right-radius: 50px;
   padding-left: 25px;
   padding-right: 25px;
+
   &__top {
     display: flex;
     flex-direction: row;
-    align-content: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding-top: 50px;
+
     &__name {
       font-family: Shrikhand;
       font-size: 1.6em;
@@ -267,12 +261,15 @@ body {
       width: 55px;
     }
     &__bubble {
+      opacity: 0;
       margin-top: 18px;
       margin-bottom: 21px;
       display: flex;
       flex-direction: row;
-      align-items: center;
+      flex: auto;
+      transition: flex-basis 3s linear;
 
+      align-items: center;
       border-radius: 20px;
       background-color: #ffffff;
       border-style: none;
@@ -284,15 +281,17 @@ body {
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
         border-radius: 20px;
-        min-width: 92%;
-
         padding-left: 15px;
         padding-top: 17px;
         padding-bottom: 17px;
         padding-right: 15px;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
+        flex: auto;
+
         &__title {
+          display: flex;
           font-weight: 700;
           overflow: hidden;
           white-space: nowrap;
@@ -303,7 +302,50 @@ body {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          align-items: flex-end;
+
           &__text {
+            padding-top: 3px;
+            font-weight: 300;
+            font-size: 0.8em;
+            overflow: hidden;
+            white-space: initial;
+            text-overflow: ellipsis;
+          }
+          &__price {
+            font-weight: 700;
+            font-size: 0.8em;
+            padding-left: 10px;
+          }
+        }
+      }
+      &__check {
+        visibility: visible;
+        opacity: 0;
+
+        & .fas {
+          color: #ffffff;
+          visibility: hidden;
+          opacity: 0;
+          transition: transform 0.3 ease-out;
+          font-size: 0em;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+
+        background-color: $green;
+
+        flex-direction: row;
+        transition: all 1s;
+
+        & .dish-hover {
+          transition: ease-out;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+          .menu__list__bubble__dish__desc__text {
             padding-top: 3px;
             font-weight: 300;
             font-size: 0.8em;
@@ -311,35 +353,25 @@ body {
             white-space: nowrap;
             text-overflow: ellipsis;
           }
-          &__price {
-            font-weight: 700;
-            font-size: 0.8em;
-          }
-        }
-      }
-      &__check {
-        visibility: hidden;
-      }
-      &:hover {
-        cursor: pointer;
-        background-color: $green;
-        & .dish-hover {
-          max-width: 78%;
-          min-width: 78%;
-          border-top-left-radius: 20px;
-          border-bottom-left-radius: 20px;
-          border-bottom-right-radius: 0;
-          border-top-right-radius: 0;
         }
         & .check-hover {
+          animation-name: rightslide;
+          animation-duration: 0.8s;
           visibility: visible;
-
-          padding-left: 20px;
+          opacity: 1;
           margin-top: 5px;
+          padding-left: 3px;
+          padding-right: 3px;
+          transition-delay: 0.15s;
 
           & .fas {
+            padding-left: 20px;
+            padding-right: 20px;
             visibility: visible;
-            color: #ffffff;
+            opacity: 1;
+            transform: rotate(360deg);
+            transition: transform 1s ease;
+            font-size: 27px;
           }
         }
       }
@@ -360,4 +392,36 @@ body {
       padding-right: 75px;
     }
   }
+}
+.one {
+  transform: translateY(1);
+  animation-name: slidebubble;
+  animation-duration: 0.8s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease;
+}
+.two {
+  transform: translateY(1);
+  animation-name: slidebubble;
+  animation-duration: 0.8s;
+  animation-delay: 0.25s;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease;
+}
+.three {
+  transform: translateY(1);
+  animation-name: slidebubble;
+  animation-duration: 0.8s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease;
+}
+.four {
+  transform: translateY(1);
+  animation-name: slidebubble;
+  animation-duration: 0.8s;
+  animation-delay: 0.75s;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease;
 }
