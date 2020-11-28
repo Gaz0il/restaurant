@@ -287,11 +287,10 @@ body {
         padding-right: 15px;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
         flex: auto;
+        overflow: hidden;
 
         &__title {
-          display: flex;
           font-weight: 700;
           overflow: hidden;
           white-space: nowrap;
@@ -309,7 +308,7 @@ body {
             font-weight: 300;
             font-size: 0.8em;
             overflow: hidden;
-            white-space: initial;
+            white-space: nowrap;
             text-overflow: ellipsis;
           }
           &__price {
@@ -345,14 +344,6 @@ body {
           border-bottom-left-radius: 20px;
           border-bottom-right-radius: 0;
           border-top-right-radius: 0;
-          .menu__list__bubble__dish__desc__text {
-            padding-top: 3px;
-            font-weight: 300;
-            font-size: 0.8em;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-          }
         }
         & .check-hover {
           animation-name: rightslide;
