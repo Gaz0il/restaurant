@@ -1,14 +1,14 @@
 @mixin header-button() {
   color: white;
-  border-radius: 40px;
+  border-radius: 60px;
 
-  background: linear-gradient(-1deg, $purple 0%, $pink 45%);
+  background: linear-gradient(-3deg, $purple 20%, $pink 85%);
   margin-top: 10px;
   margin-bottom: 40px;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 0.9em;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 0.5em;
   font-family: Roboto;
   opacity: 1;
 
@@ -24,23 +24,24 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 50px;
   background: $greybox;
   font-family: Roboto;
   border-color: $greybox;
 
   border-color: transparent;
-  box-shadow: -4px 5px 5px $greyboxshadow;
+  box-shadow: 10px 15px 15px $greyboxshadow;
   opacity: 0.8;
   border-style: none;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 55px;
+  padding-bottom: 55px;
 
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  margin-left: 35px;
-  margin-right: 20px;
-
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 1rem;
   font-weight: 700;
   text-align: left;
@@ -56,7 +57,7 @@
 @mixin title {
   padding-top: 40px;
   padding-left: 25px;
-  font-weight: 300;
+  font-weight: 900;
   margin-bottom: -10px;
 }
 @mixin heart-crop() {

@@ -26,7 +26,7 @@
 
 body {
   font-family: Roboto;
-  font-size: 1.5rem;
+  font-size: 3rem;
   margin: 0;
 }
 
@@ -39,21 +39,28 @@ body {
     display: flex;
     flex-direction: column;
   }
+  &__white {
+    padding: 70px;
+  }
 
   &__box {
     @include roundbox;
+
     &__message {
-      font-size: 1.5em;
+      font-size: 2.7em;
+      padding-left: 50px;
     }
 
     &__text {
       position: absolute;
-      font-size: 1.2em;
+      font-size: 1.8em;
       font-weight: 400;
-      border-radius: 50%;
-      padding-left: 7px;
-      padding-right: 7px;
-      margin-left: -10px;
+      border-radius: 80px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin-left: -12px;
       background-color: $purple;
       color: white;
     }
@@ -63,6 +70,7 @@ body {
       padding-right: 30px;
       padding-left: 10%;
       color: grey;
+      font-size: 40px;
     }
   }
 }
@@ -83,31 +91,27 @@ body {
   flex-direction: column;
 
   padding-bottom: 2rem;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
 
   &__pictw {
-    height: 14rem;
-
     object-fit: cover;
     object-position: 0% 90%;
     max-width: 100%;
     width: 100%;
-    max-height: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    height: 470px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
     box-shadow: 0 3px 20px -9px rgba(0, 0, 0, 0.5);
   }
   &__picth {
-    height: 14rem;
-
     object-fit: cover;
     object-position: 0% 60%;
     max-width: 100%;
     width: 100%;
-    max-height: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    height: 470px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
     box-shadow: 0 3px 20px -9px rgba(0, 0, 0, 0.5);
   }
   &__new {
@@ -121,9 +125,9 @@ body {
       object-position: 0% 90%;
       max-width: 100%;
       width: 100%;
-      max-height: 100%;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
+      height: 470px;
+      border-top-left-radius: 35px;
+      border-top-right-radius: 35px;
       box-shadow: 0 3px 20px -9px rgba(0, 0, 0, 0.5);
     }
     &__picth {
@@ -133,9 +137,9 @@ body {
       object-position: 0% 60%;
       max-width: 100%;
       width: 100%;
-      max-height: 100%;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
+      height: 470px;
+      border-top-left-radius: 35px;
+      border-top-right-radius: 35px;
       box-shadow: 0 3px 20px -9px rgba(0, 0, 0, 0.5);
     }
     &__text {
@@ -149,16 +153,16 @@ body {
       padding-right: 15px;
       padding-top: 8px;
       padding-bottom: 8px;
-      margin-top: 15px;
-      margin-right: 15px;
+      margin-top: 25px;
+      margin-right: 25px;
     }
   }
   &__card {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
     box-shadow: 0 3px 20px -9px rgba(0, 0, 0, 0.5);
 
     &__bottom {
@@ -167,10 +171,10 @@ body {
 
       justify-content: space-between;
       align-items: center;
-      margin-top: 15px;
-      margin-bottom: 20px;
+      margin-top: 40px;
+      margin-bottom: 40px;
 
-      padding-left: 15px;
+      padding-left: 25px;
 
       &__heart__empty {
         margin-right: 20px;
@@ -183,6 +187,8 @@ body {
         & .far {
           visibility: visible;
           opacity: 1;
+          font-size: 5em;
+          padding-right: 20px;
 
           @include heart-crop;
           color: gray;
