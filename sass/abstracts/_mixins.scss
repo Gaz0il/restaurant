@@ -33,15 +33,15 @@
   box-shadow: 10px 15px 15px $greyboxshadow;
   opacity: 0.8;
   border-style: none;
-  padding-top: 55px;
-  padding-bottom: 55px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   font-size: 1rem;
   font-weight: 700;
   text-align: left;
@@ -55,8 +55,8 @@
 }
 
 @mixin title {
-  padding-top: 40px;
-  padding-left: 25px;
+  padding-top: 60px;
+  padding-left: 45px;
   font-weight: 900;
   margin-bottom: -10px;
 }
