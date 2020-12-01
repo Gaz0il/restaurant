@@ -13,6 +13,23 @@
     margin-left: 50px;
     margin-bottom: 10px;
     padding-bottom: 8px;
+    color: inherit !important;
+    text-decoration: none !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+
+    & .a {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
 
     & .fas {
       padding-right: 10px;
